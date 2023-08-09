@@ -1,0 +1,118 @@
+@use "../helpers/varibels" as *;
+@use "../helpers/mixins" as *;
+//
+@use "./grid" as *;
+//
+@use "../componants/botton" as *;
+@use "../componants/heading" as *;
+@use "../componants/bg" as *;
+
+// start header
+.landing .container {
+  position: relative;
+  padding-top: 20px;
+}
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-color;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  .logo {
+    @include mobile {
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 20px;
+    }
+    @include tablet {
+      width: 50%;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+    margin-right: 10px;
+    ul {
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      gap: 20px;
+      margin-right: 10px;
+      li {
+        a {
+          font-size: 16px;
+          color: $black-color;
+          @include transition;
+          &:hover {
+            color: $violet-color;
+          }
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: $defult-color;
+      top: 0;
+      right: 0;
+      border-radius: 2px;
+    }
+    span.search {
+      display: block;
+      margin: 0 10px;
+      @include mobile {
+        display: block;
+        margin: 0px 0px 0 120px;
+      }
+    }
+  }
+  .more {
+    @include mobile {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 20px;
+    span {
+      @include tablet {
+        display: none;
+      }
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $gray-color;
+      @include transition;
+      padding: 10px;
+      &:hover {
+        background-color: $green-color;
+      }
+    }
+  }
+}
+// end header

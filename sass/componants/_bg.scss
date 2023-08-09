@@ -1,0 +1,26 @@
+@use "../helpers/varibels" as *;
+@use "../helpers/mixins" as *;
+
+%bg {
+  background-color: $black-color;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(47deg, #99e9a5 0%, #3847ef 100%);
+  }
+  @include mobile {
+    &::before {
+      display: none;
+    }
+  }
+}
+%bg-graidant {
+  background-image: linear-gradient(47deg, #99e9a5 0%, #3847ef 100%);
+}

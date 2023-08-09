@@ -1,0 +1,53 @@
+@mixin grediant-from {
+  background-image: linear-gradient(
+    to right,
+    #99e9a5 0%,
+    #3847ef 51%,
+    #99e9a5 100%
+  );
+}
+@mixin grediant-to {
+  background-image: linear-gradient(
+    to right,
+    #331c9c 0%,
+    #99e9a5 51%,
+    #331c9c 100%
+  );
+}
+// media query >
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin larg {
+  @media (max-width: 1120px) {
+    @content;
+  }
+}
+@mixin desc {
+  @media (min-width: 1221px) {
+    @content;
+  }
+}
+//  transition >>
+@mixin transition {
+  transition: all 0.4s cubic-bezier(0.68, 0.01, 0.58, 0.75) !important;
+}
+.ovarlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 39%) !important;
+}

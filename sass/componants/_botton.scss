@@ -1,0 +1,88 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/varibels" as *;
+@use "../layout/grid" as *;
+
+.grident-btn {
+  @include grediant-from;
+  display: inline-block;
+  background-size: 200%, 1px;
+  text-align: center;
+  color: $black-color;
+  padding: 16px 50px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  @include transition;
+  &:hover {
+    color: $white-color;
+    background-position: 100% 0;
+  }
+}
+.main-btn {
+  display: block;
+  cursor: pointer;
+  &:hover i {
+    transform: translateX(10px);
+  }
+  &:hover span {
+    color: $blue-color;
+  }
+  span {
+    color: $black-color;
+  }
+  i {
+    @include grediant-from;
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    margin-right: 15px;
+    transition: 0.4s;
+  }
+}
+
+.right-btn {
+  display: block;
+  margin: 20px;
+  cursor: text;
+  i {
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    margin-right: 3px;
+    background-color: $gray-color;
+    color: $defult-color;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  span {
+    color: $defult-color;
+  }
+}
+
+button.nav-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $black-color;
+  outline: none;
+  border: none;
+  gap: 4px;
+  cursor: pointer;
+  span {
+    width: 23px;
+    height: 2px;
+    background-color: $white-color;
+    display: block;
+  }
+  span:nth-child(2) {
+    width: 10px;
+    @include transition;
+  }
+  &:hover span:nth-child(2) {
+    width: 23px;
+  }
+}
