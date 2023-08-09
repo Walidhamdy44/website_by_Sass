@@ -619,20 +619,21 @@
 // end Intergation
 // rating start
 .rating {
-  .owl-carousel {
+  .-carousel {
     flex-basis: 55%;
-    .owl-item {
+    .-item {
       width: auto;
     }
   }
-  .owl-theme .owl-nav {
+  .-theme .owl-nav {
     margin-top: 10px;
     position: absolute;
     bottom: 40px;
     left: -170px;
     @include mobile {
-      top: -95px;
-      right: -420px;
+    top: -50px;
+    right: 5px;
+
     }
   }
   .owl-carousel .owl-nav button.owl-next,
