@@ -1266,8 +1266,9 @@ button.nav-btn:hover span:nth-child(2) {
 }
 @media (max-width: 576px) {
   .template .owl-theme .owl-nav {
-    top: -95px;
-    right: 15px;
+    top: -50px;
+    right: 5px;
+
   }
 }
 .template .owl-carousel .owl-nav button.owl-next,
